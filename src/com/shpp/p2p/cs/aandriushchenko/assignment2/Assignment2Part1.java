@@ -12,7 +12,7 @@ public class Assignment2Part1 {
     // Declaration of static variables.
     private static double a;
     private static double b;
-    private static  double c;
+    private static double c;
 
     /*
      * Method: main()
@@ -47,11 +47,11 @@ public class Assignment2Part1 {
         if (a == 0) {                                                 // Check if the equation is linear.
             System.out.println("This is not a quadratic equation");
         } else if (discriminant > 0) {                                // Check if the discriminant is positive.
-            double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-            double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);  // Calculate the first root.
+            double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);  // Calculate the second root.
             System.out.println("Two different roots: " + root1 + " and " + root2);
         } else if (discriminant == 0) {                               // Check if the discriminant is zero.
-            double root = -b / (2 * a);
+            double root = -b / (2 * a);                               // Calculate the root.
             System.out.println("One double root: " + root);
         } else {                                                      // In other cases the discriminant is negative.
             System.out.println("The roots do not have actual values");
