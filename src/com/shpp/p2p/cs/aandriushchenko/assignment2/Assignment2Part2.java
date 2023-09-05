@@ -9,7 +9,6 @@ import javax.swing.JPanel;    // Import a class to create a drawing panel (conta
   Problem # 2: Illusory contours.
   Create a white rectangle on top of four black circles.
 */
-
 public class Assignment2Part2 extends JFrame {
 
     // Initialization of static constants.
