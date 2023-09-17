@@ -49,12 +49,12 @@ public class Assignment2Part1 {
         } else if (discriminant > 0) {                                // Check if the discriminant is positive.
             double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);  // Calculate the first root.
             double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);  // Calculate the second root.
-            System.out.println("Two different roots: " + root1 + " and " + root2);
+            System.out.println("There are two roots: " + root1 + " and " + root2);
         } else if (discriminant == 0) {                               // Check if the discriminant is zero.
             double root = -b / (2 * a);                               // Calculate the root.
-            System.out.println("One double root: " + root);
+            System.out.println("There is one root: " + root);
         } else {                                                      // In other cases the discriminant is negative.
-            System.out.println("The roots do not have actual values");
+            System.out.println("There are no real roots!");
         }
     }
 }
