@@ -9,15 +9,20 @@ import javax.swing.JPanel;    // Import a class to create a drawing panel (conta
   Problem # 2: Illusory contours.
   Create a white rectangle on top of four black circles.
 */
+
 public class Assignment2Part2 extends JFrame {
 
     // Initialization of static constants.
-    public static final int CIRCLE_DIAM = 100;                // Diameter of circles.
     public static final int APPLICATION_WIDTH = 300;          // Width of the application window.
     public static final int APPLICATION_HEIGHT = 300;         // Height of the application window.
+    public static final int CIRCLE_DIAM = 100;                // Diameter of circles.
     public static final Color CIRCLES_COLOR = Color.BLACK;    // Color of circles.
     public static final Color RECT_COLOR = Color.WHITE;       // Color of the rectangle.
 
+    /*
+     * Constructor: Assignment2Part2()
+     * Description: Set the title and size of the window, add a panel for drawing.
+     */
     public Assignment2Part2() {                               // Create a constructor.
         setTitle("Illusory contours");                        // Set the application window title.
         setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);       // Set the application window size.
@@ -25,6 +30,10 @@ public class Assignment2Part2 extends JFrame {
         add(new DrawingPanel());                              // Add a panel for drawing on the window.
     }
 
+    /*
+     * Class: DrawingPanel
+     * Description: Set the size of the drawing panel, draw circles and a rectangle.
+     */
     static class DrawingPanel extends JPanel {
         @Override                                      // Override the method of the JPanel superclass.
         protected void paintComponent(Graphics g) {    // Using the Graphics object, which is a canvas for drawing.
@@ -65,6 +74,10 @@ public class Assignment2Part2 extends JFrame {
         }
     }
 
+    /*
+     * Method: main()
+     * Description: Run the application.
+     */
     public static void main(String[] args) {
         Assignment2Part2 illusoryContours = new Assignment2Part2();        // Create a new object of class.
         illusoryContours.setVisible(true);                                 // Make the window visible.
