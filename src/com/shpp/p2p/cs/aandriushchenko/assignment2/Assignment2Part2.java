@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 */
 
 public class Assignment2Part2 extends JFrame {
+
     // Initialization of static constants.
     public static final int APPLICATION_WIDTH = 300;          // Width of the application window.
     public static final int APPLICATION_HEIGHT = 300;         // Height of the application window.
