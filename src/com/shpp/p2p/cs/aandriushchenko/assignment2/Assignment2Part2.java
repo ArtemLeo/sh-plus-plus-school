@@ -36,7 +36,7 @@ public class Assignment2Part2 extends JFrame {
 
             // Coordinates of the top of circle 1 (upper left corner)
             int circle1X = 0;                                         // X-coordinate: left border of the panel
-            int circle1Y = 0;                                        // Y-coordinate: upper border of the panel
+            int circle1Y = 0;                                         // Y-coordinate: upper border of the panel
 
             // Coordinates of the top of circle 2 (upper right corner)
             int circle2X = (int) (realCanvasWidth - CIRCLE_DIAM);     // X: right panel border minus circle diameter
