@@ -8,7 +8,7 @@ import java.util.Scanner;
   of a quadratic equation.
 */
 public class Assignment2Part1 {
-    // Declaration of static variables
+    // Declaration of static variables:
     private static double a;
     private static double b;
     private static double c;
