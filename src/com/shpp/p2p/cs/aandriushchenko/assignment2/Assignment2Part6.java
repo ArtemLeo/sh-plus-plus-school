@@ -15,13 +15,13 @@ import java.awt.*;
 public class Assignment2Part6 extends WindowProgram {
 
     // Initialization of static constants:
-    private static final int OVALS_QUANTITY = 6;                        // Quantity of ovals in the caterpillar
-    private static final double OVAL_DIAMETER = 180;                    // Diameter of the oval
-    private static final double OVAL_BORDER = 0.01 * OVAL_DIAMETER;     // Width of the oval border
+    private static final int OVALS_QUANTITY = 6;                                // Quantity of ovals in the caterpillar
+    private static final double OVAL_DIAMETER = 180;                            // Diameter of the oval
+    private static final double OVAL_BORDER = 0.01 * OVAL_DIAMETER;             // Width of the oval border
 
-    // Constants OFFSET_BETWEEN_OVALS - the distance between ovals in pair. The pair is two ovals - bottom and top
-    private static final double OFFSET_BETWEEN_OVALS_X = OVAL_DIAMETER * 0.65;   // Offset in the X between the ovals in the pair
-    private static final double OFFSET_BETWEEN_OVALS_Y = OVAL_DIAMETER * 0.35;   // Offset in the Y between the ovals in the pair
+    // Constants OFFSET_BETWEEN_OVALS - the distance between ovals in pair (two ovals - bottom and top)
+    private static final double OFFSET_BETWEEN_OVALS_X = OVAL_DIAMETER * 0.65;  // Offset in the X between the ovals in the pair
+    private static final double OFFSET_BETWEEN_OVALS_Y = OVAL_DIAMETER * 0.35;  // Offset in the Y between the ovals in the pair
 
     // Constants OFFSET_BETWEEN_PAIR - the distance between pairs of ovals
     private static final double OFFSET_BETWEEN_PAIR_X = OVAL_DIAMETER * 0.5;     // Offset in the X between pairs of ovals
@@ -59,14 +59,14 @@ public class Assignment2Part6 extends WindowProgram {
     private void buildSingleOval(double x, double y) {
         // Create an oval border:
         GOval borderOval = new GOval(x, y, OVAL_DIAMETER, OVAL_DIAMETER);
-        borderOval.setFilled(true);                        // Set oval border fill
-        borderOval.setFillColor(BORDER_COLOR);             // Set the fill color of the oval border/body
-        add(borderOval);                                   // Add oval border to the window
+        borderOval.setFilled(true);                             // Set oval border fill
+        borderOval.setFillColor(BORDER_COLOR);                  // Set the fill color of the oval border/body
+        add(borderOval);                                        // Add oval border to the window
 
         // Create an oval body:
         GOval bodyOval = new GOval(x + OVAL_BORDER, y + OVAL_BORDER, OVAL_DIAMETER - 2 * OVAL_BORDER, OVAL_DIAMETER - 2 * OVAL_BORDER);
-        bodyOval.setFilled(true);                          // Set oval border fill
-        bodyOval.setFillColor(OVAL_COLOR);                 // Set the fill color of the oval border/body
-        add(bodyOval);                                     // Add oval body to the window
+        bodyOval.setFilled(true);                               // Set oval border fill
+        bodyOval.setFillColor(OVAL_COLOR);                      // Set the fill color of the oval border/body
+        add(bodyOval);                                          // Add oval body to the window
     }
 }
