@@ -6,7 +6,7 @@ import com.shpp.cs.a.graphics.WindowProgram;
 import java.awt.*;
 
 /*
-  Task #6: Caterpillar
+  Task # 6: Caterpillar
   Draw a caterpillar with these conditions:
    - The ovals must put one on top of the other
    - The color of the center and the color of the border of the oval must be different
