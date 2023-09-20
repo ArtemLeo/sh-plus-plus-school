@@ -20,12 +20,12 @@ public class Assignment2Part6 extends GraphicsProgram {
     private static final double OVAL_BORDER = 0.01 * OVAL_DIAMETER;             // Width of the oval border
 
     // Constants OFFSET_BETWEEN_OVALS - the distance between ovals in pair (two ovals - bottom and top)
-    private static final double OFFSET_BETWEEN_OVALS_X = OVAL_DIAMETER * 0.65;  // Offset in the X between the ovals in the pair
-    private static final double OFFSET_BETWEEN_OVALS_Y = OVAL_DIAMETER * 0.35;  // Offset in the Y between the ovals in the pair
+    private static final double OFFSET_BETWEEN_OVALS_X = OVAL_DIAMETER * 0.65;  // Offset in the X between ovals in pair
+    private static final double OFFSET_BETWEEN_OVALS_Y = OVAL_DIAMETER * 0.35;  // Offset in the Y between ovals in pair
 
     // Constants OFFSET_BETWEEN_PAIR - the distance between pairs of ovals
-    private static final double OFFSET_BETWEEN_PAIR_X = OVAL_DIAMETER * 0.5;     // Offset in the X between pairs of ovals
-    private static final double OFFSET_BETWEEN_PAIR_Y = -OFFSET_BETWEEN_OVALS_Y; // Offset in the Y between pairs of ovals
+    private static final double OFFSET_BETWEEN_PAIR_X = OVAL_DIAMETER * 0.5;     // Offset in X between pairs of ovals
+    private static final double OFFSET_BETWEEN_PAIR_Y = -OFFSET_BETWEEN_OVALS_Y; // Offset in Y between pairs of ovals
 
     // Constants of first oval position in caterpillar:
     private static final double START_X = 0;                                 // Starting position in the X coordinates
@@ -64,7 +64,10 @@ public class Assignment2Part6 extends GraphicsProgram {
         add(borderOval);                                           // Add oval border to the window
 
         // Create an oval body:
-        GOval bodyOval = new GOval(x + OVAL_BORDER, y + OVAL_BORDER, OVAL_DIAMETER - 2 * OVAL_BORDER, OVAL_DIAMETER - 2 * OVAL_BORDER);
+        GOval bodyOval = new GOval(x + OVAL_BORDER,
+                y + OVAL_BORDER,
+                OVAL_DIAMETER - 2 * OVAL_BORDER,
+                OVAL_DIAMETER - 2 * OVAL_BORDER);
         bodyOval.setFilled(true);                                  // Set oval border fill
         bodyOval.setFillColor(OVAL_COLOR);                         // Set the fill color of the oval border/body
         add(bodyOval);                                             // Add oval body to the window

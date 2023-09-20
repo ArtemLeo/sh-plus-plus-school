@@ -1,7 +1,7 @@
 package com.shpp.p2p.cs.aandriushchenko.assignment2;
 
 import acm.graphics.*;
-import com.shpp.cs.a.graphics.WindowProgram;
+import acm.program.GraphicsProgram;
 
 import java.awt.*;
 
@@ -9,7 +9,7 @@ import java.awt.*;
   Problem # 5: Boxes illusion
   Draw a matrix of black boxes, divided by "streets"
 */
-public class Assignment2Part5 extends WindowProgram {
+public class Assignment2Part5 extends GraphicsProgram {
 
     // Initialization of static constants
     private static final int QUANTITY_ROWS = 5;                // Quantity of rows
@@ -21,18 +21,17 @@ public class Assignment2Part5 extends WindowProgram {
 
     // Method run(): Set name of the graphic window, calculate the width and height of the illusion, create a cell
     public void run() {
-        double illusionWidth = QUANTITY_COLUMNS * (BOX_SIZE + DISTANCE_BETWEEN_BOXES); // Calculate the width of the illusion
-        double illusionHeight = QUANTITY_ROWS * (BOX_SIZE + DISTANCE_BETWEEN_BOXES);   // Calculate the height of the illusion
-        double widthCenter = (getWidth() - illusionWidth) / 2;           // Center the illusion on the window width
-        double heightCenter = (getHeight() - illusionHeight) / 2;        // Center the illusion on the window height
-
-        setTitle("Boxes illusion");                                      // Set the name of the graphic window
+        setTitle("Boxes illusion");                                        // Set the name of the graphic window
+        double illusionWidth = QUANTITY_COLUMNS * (BOX_SIZE + DISTANCE_BETWEEN_BOXES); // Calculate width of illusion
+        double illusionHeight = QUANTITY_ROWS * (BOX_SIZE + DISTANCE_BETWEEN_BOXES);   // Calculate height of illusion
+        double widthCenter = (getWidth() - illusionWidth) / 2;             // Center the illusion on the window width
+        double heightCenter = (getHeight() - illusionHeight) / 2;          // Center the illusion on the window height
 
         // Using loops "for", to create an illusion
-        for (int i = 0; i < QUANTITY_ROWS; i++) {                         // Loop by rows (vertical)
-            for (int j = 0; j < QUANTITY_COLUMNS; j++) {                  // Loop by columns (horizontal)
-                double singleCellWidth = widthCenter + j * (BOX_SIZE + DISTANCE_BETWEEN_BOXES);   // X-coordinate for current cell
-                double singleCellHeight = heightCenter + i * (BOX_SIZE + DISTANCE_BETWEEN_BOXES); // Y-coordinate for current cell
+        for (int i = 0; i < QUANTITY_ROWS; i++) {                          // Loop by rows (vertical)
+            for (int j = 0; j < QUANTITY_COLUMNS; j++) {                   // Loop by columns (horizontal)
+                double singleCellWidth = widthCenter + j * (BOX_SIZE + DISTANCE_BETWEEN_BOXES);   // X for current cell
+                double singleCellHeight = heightCenter + i * (BOX_SIZE + DISTANCE_BETWEEN_BOXES); // Y for current cell
 
                 // Create current cell:
                 GRect myBox = new GRect(singleCellWidth, singleCellHeight, BOX_SIZE, BOX_SIZE);
