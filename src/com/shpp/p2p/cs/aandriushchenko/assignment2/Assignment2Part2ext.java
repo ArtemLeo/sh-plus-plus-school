@@ -63,11 +63,12 @@ public class Assignment2Part2ext extends JFrame {
 
             // Draw a rectangle
             g.setColor(RECT_COLOR);  // Sets the color for the rectangle
-            g.fillRect(circle1X + CIRCLE_DIAM / 2, circle1Y + CIRCLE_DIAM / 2, (int) rectWidth, (int) rectHeight);
+            g.fillRect(circle1X + CIRCLE_DIAM / 2,
+                    circle1Y + CIRCLE_DIAM / 2, (int) rectWidth, (int) rectHeight);
         }
     }
 
-    // Method main(): Running the application
+    // Method main(): Create an object of the class and run the program
     public static void main(String[] args) {
         Assignment2Part2ext illusoryContours = new Assignment2Part2ext();    // Create a new object of class
         illusoryContours.setVisible(true);                                   // Make the window visible
