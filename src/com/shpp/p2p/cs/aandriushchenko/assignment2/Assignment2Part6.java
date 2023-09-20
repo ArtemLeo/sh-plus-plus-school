@@ -1,7 +1,7 @@
 package com.shpp.p2p.cs.aandriushchenko.assignment2;
 
 import acm.graphics.*;
-import com.shpp.cs.a.graphics.WindowProgram;
+import acm.program.GraphicsProgram;
 
 import java.awt.*;
 
@@ -12,7 +12,7 @@ import java.awt.*;
    - The color of the center and the color of the border of the oval must be different
    - You may change the quantity of segments of the caterpillar.
 */
-public class Assignment2Part6 extends WindowProgram {
+public class Assignment2Part6 extends GraphicsProgram {
 
     // Initialization of static constants:
     private static final int OVALS_QUANTITY = 6;                                // Quantity of ovals in the caterpillar
@@ -28,14 +28,14 @@ public class Assignment2Part6 extends WindowProgram {
     private static final double OFFSET_BETWEEN_PAIR_Y = -OFFSET_BETWEEN_OVALS_Y; // Offset in the Y between pairs of ovals
 
     // Constants of first oval position in caterpillar:
-    private static final double START_X = 0;                           // Starting position in the X coordinates
-    private static final double START_Y = OFFSET_BETWEEN_OVALS_Y;      // Starting position in the Y coordinates
+    private static final double START_X = 0;                                 // Starting position in the X coordinates
+    private static final double START_Y = OFFSET_BETWEEN_OVALS_Y;            // Starting position in the Y coordinates
 
     // Constants for oval colors:
     private static final Color OVAL_COLOR = new Color(135, 150, 20, 255);  // Color of the oval
     private static final Color BORDER_COLOR = new Color(10, 10, 10);          // Color of the oval border
 
-
+    @Override
     // Method run(): Set the name of the graphic window and build the caterpillar
     public void run() {
         setTitle("Caterpillar");                                       // Setting the window header to "Caterpillar"
@@ -59,14 +59,19 @@ public class Assignment2Part6 extends WindowProgram {
     private void buildSingleOval(double x, double y) {
         // Create an oval border:
         GOval borderOval = new GOval(x, y, OVAL_DIAMETER, OVAL_DIAMETER);
-        borderOval.setFilled(true);                             // Set oval border fill
-        borderOval.setFillColor(BORDER_COLOR);                  // Set the fill color of the oval border/body
-        add(borderOval);                                        // Add oval border to the window
+        borderOval.setFilled(true);                                // Set oval border fill
+        borderOval.setFillColor(BORDER_COLOR);                     // Set the fill color of the oval border/body
+        add(borderOval);                                           // Add oval border to the window
 
         // Create an oval body:
         GOval bodyOval = new GOval(x + OVAL_BORDER, y + OVAL_BORDER, OVAL_DIAMETER - 2 * OVAL_BORDER, OVAL_DIAMETER - 2 * OVAL_BORDER);
-        bodyOval.setFilled(true);                               // Set oval border fill
-        bodyOval.setFillColor(OVAL_COLOR);                      // Set the fill color of the oval border/body
-        add(bodyOval);                                          // Add oval body to the window
+        bodyOval.setFilled(true);                                  // Set oval border fill
+        bodyOval.setFillColor(OVAL_COLOR);                         // Set the fill color of the oval border/body
+        add(bodyOval);                                             // Add oval body to the window
+    }
+
+    // Method main(): Create an object of the class and run the program
+    public static void main(String[] args) {
+        new Assignment2Part6().start(args);
     }
 }
