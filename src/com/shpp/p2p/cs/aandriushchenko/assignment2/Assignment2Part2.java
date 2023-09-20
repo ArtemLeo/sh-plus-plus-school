@@ -5,6 +5,10 @@ import acm.program.GraphicsProgram;
 
 import java.awt.*;
 
+/*
+  Problem # 2: Illusory Contours
+  Create a white rectangle on top of the four circles
+*/
 public class Assignment2Part2 extends GraphicsProgram {
 
     // Initialization of static constants

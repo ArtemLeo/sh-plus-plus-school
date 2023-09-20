@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /*
-  Problem # 2: Illusory contours.
-  Create a white rectangle on top of four black circles.
+  Problem # 2: Illusory Contours
+  Create a white rectangle on top of the four circles
 */
 public class Assignment2Part2ext extends JFrame {
 
