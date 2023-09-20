@@ -1,7 +1,7 @@
 package com.shpp.p2p.cs.aandriushchenko.assignment2;
 
 import acm.graphics.*;
-import com.shpp.cs.a.graphics.WindowProgram;
+import acm.program.GraphicsProgram;
 
 import java.awt.*;
 
@@ -9,7 +9,7 @@ import java.awt.*;
   Problem # 4: Tricolor flag
   Write a program that draws a flag of three colored stripes of equal size
 */
-public class Assignment2Part4 extends WindowProgram {
+public class Assignment2Part4 extends GraphicsProgram {
 
     // Initialization of static constants.
     private static final int FLAG_WIDTH = 300;                                      // Flag width
@@ -22,6 +22,7 @@ public class Assignment2Part4 extends WindowProgram {
 
     // Method run(): Get the size of the window, position the flag stripes, and add an inscription
     public void run() {
+        setTitle("TricolorFlag");                                // Setting the window header to "TricolorFlag"
         int windowWidth = getWidth();                            // Get window width
         int windowHeight = getHeight();                          // Get window height
 
@@ -36,7 +37,7 @@ public class Assignment2Part4 extends WindowProgram {
                 stripe.setFillColor(BLUE_COLOR);                 // Set the fill color of the strip
             else if (i == 1)                                     // Add and move strip to the width of the blueStripe
                 stripe.setFillColor(WHITE_COLOR);                // Set the fill color of the strip
-            else                                                 // Add and move strip to the width of blue and whiteStripe
+            else                                                 // Add and move strip to width of blue and whiteStripe
                 stripe.setFillColor(RED_COLOR);                  // Set the fill color of the strip
 
             // Find coordinates to center the flag (get X and Y), add and move strip to the width of previous strips
