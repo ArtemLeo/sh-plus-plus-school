@@ -21,8 +21,9 @@ public class Assignment2Part4 extends GraphicsProgram {
 
 
     // Method run(): Get the size of the window, position the flag stripes, and add an inscription
+    @Override
     public void run() {
-        setTitle("TricolorFlag");                                // Setting the window header to "TricolorFlag"
+        setTitle("Tricolor Flag");                               // Setting the window header to "Tricolor Flag"
         int windowWidth = getWidth();                            // Get window width
         int windowHeight = getHeight();                          // Get window height
 

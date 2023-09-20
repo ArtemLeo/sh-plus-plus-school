@@ -3,9 +3,8 @@ package com.shpp.p2p.cs.aandriushchenko.assignment2;
 import java.util.Scanner;
 
 /*
-  Problem # 1: Quadratic equation.
-  Write a console program that will take 3 numbers of type double (a, b, c) as input and print the roots
-  of a quadratic equation.
+  Problem # 1: Quadratic equation
+  Write a console program that will take 3 numbers of type double as input and print the roots of quadratic equation
 */
 public class Assignment2Part1 {
     // Declaration of static variables:

@@ -18,7 +18,7 @@ public class Assignment2Part5 extends GraphicsProgram {
     private static final double DISTANCE_BETWEEN_BOXES = 10;   // Distance between boxes horizontally and vertically
     private static final Color BOXES_COLOR = Color.BLACK;      // Color of boxes
 
-
+    @Override
     // Method run(): Set name of the graphic window, calculate the width and height of the illusion, create a cell
     public void run() {
         setTitle("Boxes illusion");                                        // Set the name of the graphic window
@@ -27,7 +27,7 @@ public class Assignment2Part5 extends GraphicsProgram {
         double widthCenter = (getWidth() - illusionWidth) / 2;             // Center the illusion on the window width
         double heightCenter = (getHeight() - illusionHeight) / 2;          // Center the illusion on the window height
 
-        // Using loops "for", to create an illusion
+        // Using loops "for", to create an illusion:
         for (int i = 0; i < QUANTITY_ROWS; i++) {                          // Loop by rows (vertical)
             for (int j = 0; j < QUANTITY_COLUMNS; j++) {                   // Loop by columns (horizontal)
                 double singleCellWidth = widthCenter + j * (BOX_SIZE + DISTANCE_BETWEEN_BOXES);   // X for current cell
@@ -37,7 +37,7 @@ public class Assignment2Part5 extends GraphicsProgram {
                 GRect myBox = new GRect(singleCellWidth, singleCellHeight, BOX_SIZE, BOX_SIZE);
                 myBox.setFilled(true);                                    // Set the cell fill
                 myBox.setColor(BOXES_COLOR);                              // Set the color for the cell
-                add(myBox);
+                add(myBox);                                               // Add cell to the window
             }
         }
     }

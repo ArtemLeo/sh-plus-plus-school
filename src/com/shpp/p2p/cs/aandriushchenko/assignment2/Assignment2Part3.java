@@ -7,7 +7,7 @@ import java.awt.*;
 
 /*
   Problem # 3: Paw Prints
-  Fill empty method drawPawprint(double x, double y) with code.
+  Draw Paw Prints. Fill empty method drawPawprint(double x, double y) with code.
 */
 public class Assignment2Part3 extends GraphicsProgram {
 
@@ -37,8 +37,9 @@ public class Assignment2Part3 extends GraphicsProgram {
     public static final Color HEEL_COLOR = Color.BLACK;              // Heel color
 
     // Method run(): Draws paw prints, get window width and height and setting the window header
+    @Override
     public void run() {
-        setTitle("PawPrints");                                           // Setting the window header to "PawPrints"
+        setTitle("Paw Prints");                                           // Setting the window header to "Paw Prints"
         setSize((int) (getWidth() / 2.5), (int) (getHeight() / 1.8));    // Set window width and height
         drawPawprint(20, 20);                                      // Draw first paw print
         drawPawprint(180, 70);                                     // Draw second paw print
