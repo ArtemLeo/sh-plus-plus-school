@@ -9,7 +9,7 @@ import javax.swing.JPanel;
   Problem # 2: Illusory contours.
   Create a white rectangle on top of four black circles.
 */
-public class Assignment2Part2 extends JFrame {
+public class Assignment2Part2ext extends JFrame {
 
     // Initialization of static constants
     public static final int APPLICATION_WIDTH = 300;          // Width of the application window
@@ -19,7 +19,7 @@ public class Assignment2Part2 extends JFrame {
     public static final Color RECT_COLOR = Color.WHITE;       // Color of the rectangle
 
     // Constructor Assignment2Part2(): Set the title and size of the window, add a panel for drawing
-    public Assignment2Part2() {                               // Create a constructor
+    public Assignment2Part2ext() {                            // Create a constructor
         setTitle("Illusory contours");                        // Set the application window title
         setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);       // Set the application window size
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       // Set window closing operation
@@ -69,8 +69,8 @@ public class Assignment2Part2 extends JFrame {
 
     // Method main(): Running the application
     public static void main(String[] args) {
-        Assignment2Part2 illusoryContours = new Assignment2Part2();    // Create a new object of class
-        illusoryContours.setVisible(true);                             // Make the window visible
+        Assignment2Part2ext illusoryContours = new Assignment2Part2ext();    // Create a new object of class
+        illusoryContours.setVisible(true);                                   // Make the window visible
     }
 }
 
